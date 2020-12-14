@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	cout << "Choose a number of action: \n0 Exit \n";
+	cout << "The printing programm enterprise edition. NoName Inc 2020 No rights reserved \nChoose a number of action: \n0 Exit \n";
 	for (int i = 10, peremennaya = 1; i < 162; i++, peremennaya++) {
 		string action;
 		if (i < 100)
