@@ -25,7 +25,7 @@ public:
 	void push(const T&);
 	void pop();
 
-	friend ostream& operator<< <>(ostream&, const Stack<T>&);
+	friend ostream& operator<< <>(ostream&, Stack<T>);
 	friend istream& operator>> <>(istream&, Stack<T>&);
 };
 
@@ -94,6 +94,8 @@ void Stack<T>::push(const T& value) {
 
 template<class T>
 void Stack<T>::pop() {
+	if (!head)
+		throw std::exception("Cannot remove elements from empty stack");
 	Node* tmp = head;
 	head = head->next;
 	delete tmp;
@@ -102,19 +104,24 @@ void Stack<T>::pop() {
 
 
 template<class T>
-ostream& operator<< <>(ostream& out, const Stack<T>& s) {
-	/*Node* otherIt = s.head;
-	while (otherIt) {
-		out << otherIt->data << ' ';
-		otherIt = otherIt->next;
-	}*/
+ostream& operator<< <>(ostream& out, Stack<T> s) {
+	Stack<T> rev;
+	while (!s.empty()) {
+		rev.push(s.top());
+		s.pop();
+	}
+
+	while (!rev.empty()) {
+		out << rev.top() << ' ';
+		rev.pop();
+	}
 	return out;
 }
 
 
 template<class T>
 istream& operator>> <>(istream& in, Stack<T>& s) {
-	cout << "How many numbers do you want to enter?\n";
+	cout << "How many elements do you want to enter?\n";
 	int count;
 	in >> count;
 	cout << "Enter " << count << " numbers: ";
