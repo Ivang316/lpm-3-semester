@@ -1,2 +1,2 @@
 # College programming tasks
-I store here code for programming tasks from my college
+I store here my code for programming tasks from college
