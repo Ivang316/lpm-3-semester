@@ -8,15 +8,15 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # User-specific files
-*.rsuser
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-*.vsxproj*
+**.rsuser
+**.suo
+**.user
+**.userosscache
+**.sln.docstates
+**.vsxproj*
 
 # User-specific files (MonoDevelop/Xamarin Studio)
-*.userprefs
+**.userprefs
 
 # Mono auto generated files
 mono_crash.*
@@ -36,8 +36,16 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# Jetbrains ide files
+.idea
+cmake-build-debug
+CMakeLists.txt
+
+# Matlab files
+*.asv
+
 # Visual Studio 2015/2017 cache/options directory
-.vs/
+**.vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -113,6 +121,7 @@ ipch/
 *.VC.VC.opendb
 
 # Visual Studio profiler
+*.vs
 *.psess
 *.vsp
 *.vspx
