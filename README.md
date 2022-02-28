@@ -1,3 +1,3 @@
-# College programming tasks
-Here is the code for programming tasks from college
+# University programming tasks
+Here is the code for my programming tasks from the university.
 
